@@ -209,9 +209,9 @@ def generate_launch_description():
     # Define LaunchDescription variable
     ld = LaunchDescription(ARGUMENTS)
     ld.add_action(create3_bridge)
-    ld.add_action(hmi_display_msg_bridge)
-    ld.add_action(hmi_buttons_msg_bridge)
-    ld.add_action(hmi_led_msg_bridge)
+    #ld.add_action(hmi_display_msg_bridge)
+    #ld.add_action(hmi_buttons_msg_bridge)
+    #ld.add_action(hmi_led_msg_bridge)
     ld.add_action(lidar_bridge)
     ld.add_action(oakd_camera_bridge)
     return ld

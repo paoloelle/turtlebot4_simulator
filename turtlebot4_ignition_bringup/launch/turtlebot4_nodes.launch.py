@@ -67,5 +67,5 @@ def generate_launch_description():
     ld = LaunchDescription(ARGUMENTS)
     ld.add_action(param_file_cmd)
     ld.add_action(turtlebot4_node)
-    ld.add_action(turtlebot4_ignition_hmi_node)
+    #ld.add_action(turtlebot4_ignition_hmi_node)
     return ld
