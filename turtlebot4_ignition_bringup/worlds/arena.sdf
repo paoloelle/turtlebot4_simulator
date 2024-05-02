@@ -1,0 +1,128 @@
+<?xml version="1.0" ?>
+<sdf version="1.9">
+	<world name="arena">
+
+		<!--<plugin
+    	  filename="libignition-gazebo-sensors-system.so"
+    	  name="ignition::gazebo::systems::Sensors">
+    	  <render_engine>ogre2</render_engine>
+    	</plugin>-->
+
+		<scene>
+			<ambient>1 1 1 1</ambient>
+			<grid>0</grid>
+		</scene>
+
+
+		<physics type="ode">
+			<max_step_size>0.003</max_step_size>
+			<real_time_factor>1.0</real_time_factor>
+		</physics>
+
+
+		<gazebo>
+			<plugin file_name="libignition-gazebo-contact-system.so" name="ignition::gazebo::systems::Contact"/>
+		</gazebo>
+		<gazebo>
+			<plugin file_name="libignition-gazebo-sensors-system.so" name="ignition::gazebo::systems::Sensors">
+				<render_engine>ogre</render_engine>
+			</plugin>
+		</gazebo>
+
+		<plugin name='ignition::gazebo::systems::Physics' filename='libignition-gazebo-physics-system.so'/>
+    		<plugin name='ignition::gazebo::systems::UserCommands' filename='libignition-gazebo-user-commands-system.so'/>
+    		<plugin name='ignition::gazebo::systems::SceneBroadcaster' filename='libignition-gazebo-scene-broadcaster-system.so'/>
+
+      		<plugin filename="libignition-gazebo-contact-system.so" name="ignition::gazebo::systems::Contact"></plugin>
+
+      		<plugin filename="libignition-gazebo-sensors-system.so" name="ignition::gazebo::systems::Sensors">
+        		<render_engine>ogre</render_engine>
+      	</plugin>
+      	
+
+				
+			
+		<light type="point" name="point_light1">
+				<pose>0 -0.6 1.5 0 0 0</pose>
+				<intensity>1</intensity>
+				<diffuse>1 1 0 1</diffuse>
+				<specular>.1 .1 .1 1</specular>
+				<attenuation>
+				<range>4</range>
+				<linear>1</linear>
+				<constant>0.8</constant>
+				<quadratic>0</quadratic>
+				</attenuation>
+				<cast_shadows>false</cast_shadows>
+		</light>
+
+
+
+		<include>
+			<uri>ground.sdf</uri>
+		</include>
+		<include>
+			<uri>walls.sdf</uri>
+		</include>
+		
+		<model name="objects">
+
+			<!-- include objects-->
+
+			<!--added this dummy object cause the PosePublisher plugin takes this first model as a reference frame
+			for all the other nested model. In this way if I move this model all the other models will be updated.
+			To avoid this I put a static dummy object somewhere far from the arena-->
+			<model name ="dummy_object">
+			
+
+				<static>1</static>
+
+				<pose> 0 3 3 0 0 0 </pose>
+				
+				<link name="dummy_object">
+				</link>
+
+			</model>
+
+			<include>/model/objects/pose
+				<uri>object.sdf</uri>
+				<name>object1</name>
+				<pose>0.4 2.8 0.15 0 0 0</pose>
+			</include>
+			
+			<include>
+				<uri>object.sdf</uri>/home/paolo
+				<name>object2</name>
+				<pose>-0.4 2.8 0.15 0 0 0</pose>
+			</include>
+
+			<include>
+				<uri>object.sdf</uri>
+				<name>object3</name>
+				<pose>1.3 2.8 0.15 0 0 0</pose>
+			</include>
+
+			<include>
+				<uri>object.sdf</uri>
+				<name>object4</name>
+				<pose>-1.3 2.8 0.15 0 0 0</pose>
+			</include>
+
+			<plugin filename="libignition-gazebo-pose-publisher-system" name="ignition::gazebo::systems::PosePublisher">
+				<publish_link_pose>false</publish_link_pose>
+				<publish_model_pose>false</publish_model_pose>
+				<publish_nested_model_pose>true</publish_nested_model_pose>
+				<use_pose_vector_msg>true</use_pose_vector_msg>
+				<publish_visual_pose>false</publish_visual_pose>
+				<update_frequency>5</update_frequency>
+			</plugin>
+
+
+			
+
+		</model>
+
+		
+
+	</world>
+</sdf>

@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<sdf version="1.9">
+
+	
+
+		<model name ="object">
+
+			
+			
+			
+			<link name="link_object">
+
+				
+
+				<visual name="visual_object">					
+					<geometry>
+						<cylinder>
+							<radius>.1</radius>
+							<length>0.08</length>
+						</cylinder>
+					</geometry>
+					<material>
+						<diffuse>1 1 0 1</diffuse>
+					</material>
+				</visual>
+
+				<collision name="collision_object">
+					<geometry>
+						<cylinder>
+							<radius>.1</radius>
+							<length>0.08</length>
+						</cylinder>
+					</geometry>
+
+					<surface>
+						<friction>
+							<ode>
+								<mu>0.05</mu>
+							</ode>
+						</friction>
+					</surface>
+
+				</collision>
+
+			</link>
+		</model>
+		
+
+	</sdf>
