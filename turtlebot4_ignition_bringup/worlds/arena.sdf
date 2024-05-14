@@ -43,12 +43,12 @@
 				
 			
 		<light type="point" name="point_light1">
-				<pose>0 -0.6 1.5 0 0 0</pose>
-				<intensity>1</intensity>
-				<diffuse>1 1 0 1</diffuse>
+				<pose>0 -0.8 1.5 0 0 0</pose>
+				<intensity>5</intensity>
+				<diffuse>1 1 1 1</diffuse>
 				<specular>.1 .1 .1 1</specular>
 				<attenuation>
-				<range>4</range>
+				<range>5</range>
 				<linear>1</linear>
 				<constant>0.8</constant>
 				<quadratic>0</quadratic>
