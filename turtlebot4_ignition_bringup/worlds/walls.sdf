@@ -23,7 +23,7 @@
 			</collision>
 		</link>
 		<link name="link_wall_source">
-			<pose relative_to="link_wall_nest">0 4.097551000253279 0 0 0 0</pose>
+			<pose relative_to="link_wall_nest">0 4.597551000253279 0 0 0 0</pose>
 			<visual name="visual_source_wall">
 				<geometry>
 					<box>
@@ -43,11 +43,11 @@
 			</collision>
 		</link>
 		<link name="link_edge_wall1">
-			<pose relative_to="link_wall_nest">2.05 2.0487755001266397 0 0 0 1.5707963267948966</pose>
+			<pose relative_to="link_wall_nest">2.05 2.2987755001266397 0 0 0 1.5707963267948966</pose>
 			<visual name="visual_edge_wall1">
 				<geometry>
 					<box>
-						<size>4.19755100025328 0.1 1</size>
+						<size>4.69755100025328 0.1 1</size>
 					</box>
 				</geometry>
 				<material>
@@ -57,7 +57,7 @@
 			<collision name="collision_edge_wall1">
 				<geometry>
 					<box>
-						<size>4.19755100025328 0.1 1</size>
+						<size>4.69755100025328 0.1 1</size>
 					</box>
 				</geometry>
 			</collision>
@@ -67,7 +67,7 @@
 			<visual name="visual_edge_wall2">
 				<geometry>
 					<box>
-						<size>4.19755100025328 0.1 1</size>
+						<size>4.69755100025328 0.1 1</size>
 					</box>
 				</geometry>
 				<material>
