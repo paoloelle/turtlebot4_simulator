@@ -2,6 +2,7 @@
 <sdf version="1.9">
 	<world name="arena">
 
+
 		<!--<plugin
     	  filename="libignition-gazebo-sensors-system.so"
     	  name="ignition::gazebo::systems::Sensors">
@@ -44,7 +45,7 @@
 			
 		<light type="point" name="point_light1">
 				<pose>0 -0.8 1.5 0 0 0</pose>
-				<intensity>5</intensity>
+				<intensity>4</intensity>
 				<diffuse>1 1 1 1</diffuse>
 				<specular>.1 .1 .1 1</specular>
 				<attenuation>
@@ -54,6 +55,35 @@
 				<quadratic>0.2</quadratic>
 				</attenuation>
 				<cast_shadows>false</cast_shadows>
+		</light>
+
+
+		<light type="point" name="point_light2">
+			<pose>1.5 -0.8 1.5 0 0 0</pose>
+			<intensity>4</intensity>
+			<diffuse>1 1 1 1</diffuse>
+			<specular>.1 .1 .1 1</specular>
+			<attenuation>
+			<range>6</range>
+			<linear>0.7</linear>
+			<constant>0.3</constant>
+			<quadratic>0.2</quadratic>
+			</attenuation>
+			<cast_shadows>false</cast_shadows>
+		</light>
+
+		<light type="point" name="point_light3">
+			<pose>-1.5 -0.8 1.5 0 0 0</pose>
+			<intensity>4</intensity>
+			<diffuse>1 1 1 1</diffuse>
+			<specular>.1 .1 .1 1</specular>
+			<attenuation>
+			<range>6</range>
+			<linear>0.7</linear>
+			<constant>0.3</constant>
+			<quadratic>0.2</quadratic>
+			</attenuation>
+			<cast_shadows>false</cast_shadows>
 		</light>
 
 
