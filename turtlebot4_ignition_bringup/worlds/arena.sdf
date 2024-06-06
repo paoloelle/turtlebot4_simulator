@@ -148,7 +148,7 @@
 			<include>
 				<uri>object.sdf</uri>/home/paolo
 				<name>object6</name>
-				<pose>-0.2 3.8 0.15 0 0 0</pose>
+				<pose>-0.2 3.3 0.15 0 0 0</pose>
 			</include>
 
 			<include>
@@ -161,6 +161,30 @@
 				<uri>object.sdf</uri>
 				<name>object8</name>
 				<pose>-0.4 3.5 0.15 0 0 0</pose>
+			</include>
+
+			<include>/model/objects/pose
+				<uri>object.sdf</uri>
+				<name>object9</name>
+				<pose>1.5 3.2 0.15 0 0 0</pose>
+			</include>
+			
+			<include>
+				<uri>object.sdf</uri>/home/paolo
+				<name>object10</name>
+				<pose>-1.5 3.4 0.15 0 0 0</pose>
+			</include>
+
+			<include>
+				<uri>object.sdf</uri>
+				<name>object11</name>
+				<pose>1.7 3.0 0.15 0 0 0</pose>
+			</include>
+
+			<include>
+				<uri>object.sdf</uri>
+				<name>object12</name>
+				<pose>-1.0 3.5 0.15 0 0 0</pose>
 			</include>
 
 			<plugin filename="libignition-gazebo-pose-publisher-system" name="ignition::gazebo::systems::PosePublisher">
