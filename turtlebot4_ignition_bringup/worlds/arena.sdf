@@ -16,7 +16,7 @@
 
 
 		<physics type="ode">
-			<!--<max_step_size>0.003</max_step_size> --><!-- increase this value to increase the real time factor-->
+			<max_step_size>0.005</max_step_size><!-- increase this value to increase the real time factor-->
 			<real_time_factor>4.0</real_time_factor> <!-- increase this value to run simulation faster than real time-->
 		</physics>
 
