@@ -83,13 +83,14 @@ def generate_launch_description():
         launch_arguments=[
             ('ign_args', [LaunchConfiguration('world'),
                           '.sdf',
-                          ' -v 4 -r -s', # -r automatic start simulation, -s start as a server (no GUI)
+                          ' -v 4 -r -s --render-engine ogre2', # -r automatic start simulation, -s start as a server (no GUI), --render-engine ogre2
                           ' --gui-config ',
                           PathJoinSubstitution(
                             [pkg_turtlebot4_ignition_bringup,
                              'gui',
                              LaunchConfiguration('model'),
-                             'gui.config'])]) 
+                             'gui.config'])
+                            ])
         ]
     )
 
