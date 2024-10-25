@@ -97,32 +97,47 @@
 			<uri>walls.sdf</uri>
 		</include>
 		
-			<include>
-				<uri>object2.sdf</uri>
-				<name>object1</name>
-				<pose>0.4 2.8 0.15 0 0 0</pose>
-			</include>
+		<include>
+			<uri>object2.sdf</uri>
+			<name>object1</name>
+			<pose>0.4 2.8 0.15 0 0 0</pose>
+		</include>
 		
-	
-			
-			<include>
-				<uri>object2.sdf</uri>
-				<name>object2</name>
-				<pose>-0.4 2.8 0.15 0 0 0</pose>
-			</include>
+		<include>
+			<uri>object2.sdf</uri>
+			<name>object2</name>
+			<pose>-0.4 2.8 0.15 0 0 0</pose>
+		</include>
 
-			<include>
-				<uri>object2.sdf</uri>
-				<name>object3</name>
-				<pose>1.3 2.8 0.15 0 0 0</pose>
-			</include>
+		<include>
+			<uri>object2.sdf</uri>
+			<name>object3</name>
+			<pose>1.3 2.8 0.15 0 0 0</pose>
+		</include>
 
-			<include>
-				<uri>object2.sdf</uri>
-				<name>object4</name>
-				<pose>-1.3 2.8 0.15 0 0 0</pose>
+		<include>
+			<uri>object2.sdf</uri>
+			<name>object4</name>
+			<pose>-1.3 2.8 0.15 0 0 0</pose>
+		</include>
 
-			</include>
+		<include>
+			<uri>object2.sdf</uri>
+			<name>object5</name>
+			<pose>1 3.2 0.15 0 0 0</pose>
+		</include>
+
+		<include>
+			<uri>object2.sdf</uri>
+			<name>object6</name>
+			<pose>-1 3.2 0.15 0 0 0</pose>
+		</include>
+
+		<include>
+			<uri>object2.sdf</uri>
+			<name>object7</name>
+			<pose>0 3.2 0.15 0 0 0</pose>
+		</include>
 
 		
 
