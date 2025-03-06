@@ -2,13 +2,6 @@
 <sdf version="1.9">
 	<world name="arena">
 
-
-		<!--<plugin
-    	  filename="libignition-gazebo-sensors-system.so"
-    	  name="ignition::gazebo::systems::Sensors">
-    	  <render_engine>ogre2</render_engine>
-    	</plugin>-->
-
 		<scene>
 			<ambient>1 1 1 1</ambient>
 			<grid>0</grid>
@@ -20,11 +13,11 @@
 
 
 		<physics type="ode">
-			<max_step_size>0.003</max_step_size><!-- increase this value to increase the real time factor-->
-			<real_time_factor>2.0</real_time_factor> <!-- increase this value to run simulation faster than real time-->
+			<max_step_size>0.003</max_step_size> <!-- increase this value to increase the real time factor-->
+			<real_time_factor>3.0</real_time_factor> <!-- increase this value to run simulation faster than real time-->
 		</physics>
 
-
+		<!-- 
 		<gazebo>
 			<plugin file_name="libignition-gazebo-contact-system.so" name="ignition::gazebo::systems::Contact"/>
 		</gazebo>
@@ -32,16 +25,14 @@
 			<plugin file_name="libignition-gazebo-sensors-system.so" name="ignition::gazebo::systems::Sensors">
 				<render_engine>ogre</render_engine>
 			</plugin>
-		</gazebo>
+		</gazebo> -->
 
 		<plugin name='ignition::gazebo::systems::Physics' filename='libignition-gazebo-physics-system.so'/>
-    		<plugin name='ignition::gazebo::systems::UserCommands' filename='libignition-gazebo-user-commands-system.so'/>
-    		<plugin name='ignition::gazebo::systems::SceneBroadcaster' filename='libignition-gazebo-scene-broadcaster-system.so'/>
-
-      		<plugin filename="libignition-gazebo-contact-system.so" name="ignition::gazebo::systems::Contact"></plugin>
-
-      		<plugin filename="libignition-gazebo-sensors-system.so" name="ignition::gazebo::systems::Sensors">
-        		<render_engine>ogre</render_engine>
+    	<plugin name='ignition::gazebo::systems::UserCommands' filename='libignition-gazebo-user-commands-system.so'/>
+    	<plugin name='ignition::gazebo::systems::SceneBroadcaster' filename='libignition-gazebo-scene-broadcaster-system.so'/>
+      	<plugin filename="libignition-gazebo-contact-system.so" name="ignition::gazebo::systems::Contact"></plugin>
+      	<plugin filename="libignition-gazebo-sensors-system.so" name="ignition::gazebo::systems::Sensors">
+        	<render_engine>ogre</render_engine>
       	</plugin>
       	
 				
