@@ -1,0 +1,62 @@
+<?xml version="1.0" ?>
+<sdf version="1.9">
+
+	
+
+		<model name ="object">
+
+
+		
+				<plugin filename="libgz-sim-pose-publisher-system.so" name="gz::sim::systems::PosePublisher">
+					<publish_link_pose>false</publish_link_pose>
+					<publish_model_pose>true</publish_model_pose>
+					<publish_nested_model_pose>true</publish_nested_model_pose>
+					<use_pose_vector_msg>false</use_pose_vector_msg>
+					<publish_visual_pose>false</publish_visual_pose>
+					<update_frequency>10</update_frequency>
+				</plugin>
+
+			
+			
+			<link name="link_object">
+
+	
+				<visual name="visual_object">					
+					<geometry>
+						<cylinder>
+							<radius>.1</radius>
+							<length>0.08</length>
+						</cylinder>
+					</geometry>
+					<material>
+						<diffuse>1 1 0 1</diffuse>
+					</material>
+				</visual>
+
+				<collision name="collision_object">
+					<geometry>
+						<cylinder>
+							<radius>.1</radius>
+							<length>0.08</length>
+						</cylinder>
+					</geometry>
+
+					<surface>
+						<friction>
+							<ode>
+								<mu>0.05</mu>
+							</ode>
+						</friction>
+					</surface>
+
+				</collision>
+
+			</link>
+
+
+
+
+		</model>
+		
+
+	</sdf>
