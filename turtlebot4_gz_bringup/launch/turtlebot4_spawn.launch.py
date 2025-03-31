@@ -135,11 +135,11 @@ def generate_launch_description():
         ),
 
         # Dock description
-        IncludeLaunchDescription(
-            PythonLaunchDescriptionSource([dock_description_launch]),
-            # The robot starts docked
-            launch_arguments={'gazebo': 'ignition'}.items(),
-        ),
+        # IncludeLaunchDescription(
+        #     PythonLaunchDescriptionSource([dock_description_launch]),
+        #     # The robot starts docked
+        #     launch_arguments={'gazebo': 'ignition'}.items(),
+        # ),
 
         # Spawn TurtleBot 4
         Node(
@@ -155,17 +155,17 @@ def generate_launch_description():
         ),
 
         # Spawn Dock
-        Node(
-            package='ros_gz_sim',
-            executable='create',
-            arguments=['-name', dock_name,
-                       '-x', x_dock,
-                       '-y', y_dock,
-                       '-z', z,
-                       '-Y', yaw_dock,
-                       '-topic', 'standard_dock_description'],
-            output='screen',
-        ),
+        # Node(
+        #     package='ros_gz_sim',
+        #     executable='create',
+        #     arguments=['-name', dock_name,
+        #                '-x', x_dock,
+        #                '-y', y_dock,
+        #                '-z', z,
+        #                '-Y', yaw_dock,
+        #                '-topic', 'standard_dock_description'],
+        #     output='screen',
+        # ),
 
         # ROS IGN bridge
         IncludeLaunchDescription(
@@ -173,7 +173,7 @@ def generate_launch_description():
             launch_arguments=[
                 ('model', LaunchConfiguration('model')),
                 ('robot_name', robot_name),
-                ('dock_name', dock_name),
+                # ('dock_name', dock_name),
                 ('namespace', namespace)]
         ),
 
@@ -280,8 +280,8 @@ def generate_launch_description():
     ld = LaunchDescription(ARGUMENTS)
     ld.add_action(param_file_cmd)
     ld.add_action(spawn_robot_group_action)
-    ld.add_action(localization)
-    ld.add_action(slam)
-    ld.add_action(nav2)
-    ld.add_action(rviz)
+    # ld.add_action(localization)
+    # ld.add_action(slam)
+    # ld.add_action(nav2)
+    # ld.add_action(rviz)
     return ld
