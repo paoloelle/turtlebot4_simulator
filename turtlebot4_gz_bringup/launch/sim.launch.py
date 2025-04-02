@@ -90,6 +90,8 @@ def generate_launch_description():
                 '.sdf',
                 ' -r',
                 ' -v 4',
+                ' -s',
+                ' --render-engine ogre2',
                 ' --gui-config ',
                 PathJoinSubstitution([
                     pkg_turtlebot4_gz_bringup,
