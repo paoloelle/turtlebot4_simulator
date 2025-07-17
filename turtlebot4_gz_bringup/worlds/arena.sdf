@@ -18,9 +18,9 @@
     <plugin name="gz::sim::systems::UserCommands" filename="gz-sim-user-commands-system" />
     <plugin name="gz::sim::systems::SceneBroadcaster" filename="gz-sim-scene-broadcaster-system" />
     <plugin name="gz::sim::systems::Contact" filename="gz-sim-contact-system" />
-    <!-- <plugin name="gz::sim::systems::Sensors" filename="gz-sim-sensors-system">
+    <plugin name="gz::sim::systems::Sensors" filename="gz-sim-sensors-system">
         <render_engine>ogre</render_engine>
-    </plugin> -->
+    </plugin>
 
     <plugin name="gz::sim::EvolutionHandler" filename="libEvolutionHandlerPlugin"/>
 
